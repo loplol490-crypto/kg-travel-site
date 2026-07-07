@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,6 +14,8 @@ body {
   color: #222;
 }
 
+
+/* Главный экран */
 
 .hero {
   background:
@@ -30,6 +37,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  animation: fadeIn 1s ease;
 }
 
 
@@ -46,6 +55,8 @@ body {
 }
 
 
+/* Кнопки */
+
 .btn {
   display: inline-block;
   margin-top: 25px;
@@ -59,15 +70,19 @@ body {
 
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
   background: #0077b6;
 }
 
+
+/* Разделы */
 
 section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
+
+  animation: slideUp 0.8s ease;
 }
 
 
@@ -78,20 +93,27 @@ h2 {
 }
 
 
+/* Карточки */
+
 .card {
   background: white;
   padding: 25px;
   margin: 20px 0;
   border-radius: 20px;
+
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
   transition: 0.3s;
 }
 
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
 }
 
+
+/* Галерея */
 
 .gallery {
   display: grid;
@@ -104,13 +126,15 @@ h2 {
   background: white;
   border-radius: 20px;
   overflow: hidden;
+
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
   transition: 0.3s;
 }
 
 
 .photo-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
 }
 
 
@@ -118,6 +142,13 @@ h2 {
   width: 100%;
   height: 220px;
   object-fit: cover;
+
+  transition: 0.4s;
+}
+
+
+.photo-card:hover img {
+  transform: scale(1.05);
 }
 
 
@@ -126,6 +157,38 @@ h2 {
   padding: 15px;
 }
 
+
+/* Анимации */
+
+@keyframes fadeIn {
+
+from {
+  opacity: 0;
+}
+
+to {
+  opacity: 1;
+}
+
+}
+
+
+@keyframes slideUp {
+
+from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+}
+
+
+/* Подвал */
 
 footer {
   text-align: center;
@@ -162,6 +225,11 @@ section {
 
 h2 {
   font-size: 25px;
+}
+
+
+.card {
+  padding: 20px;
 }
 
 }
