@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,221 +16,348 @@ body {
 }
 
 
+/* Меню */
+
+.navbar {
+
+position: sticky;
+top: 0;
+
+background: white;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 15px 30px;
+
+box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+z-index: 1000;
+
+}
+
+
+.navbar h2 {
+margin: 0;
+}
+
+
+.nav-links a {
+
+margin-left: 20px;
+
+text-decoration: none;
+
+color: #222;
+
+font-weight: bold;
+
+}
+
+
+.nav-links a:hover {
+
+color: #00a8e8;
+
+}
+
+
+
 /* Главный экран */
 
 .hero {
-  background:
-  linear-gradient(
-    rgba(0,0,0,0.45),
-    rgba(0,0,0,0.45)
-  ),
-  url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
 
-  background-size: cover;
-  background-position: center;
+background:
+linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.45)
+),
+url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
 
-  color: white;
-  padding: 120px 20px;
-  text-align: center;
 
-  min-height: 500px;
+background-size: cover;
+background-position: center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-  animation: fadeIn 1s ease;
+color: white;
+
+padding: 120px 20px;
+
+text-align: center;
+
+min-height: 500px;
+
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
 }
+
+
 
 
 .hero h1 {
-  font-size: 50px;
-  margin-bottom: 20px;
+
+font-size: 50px;
+
+margin-bottom: 20px;
+
 }
+
 
 
 .hero p {
-  font-size: 22px;
-  max-width: 600px;
-  margin: auto;
+
+font-size: 22px;
+
 }
 
 
-/* Кнопки */
+
+/* Кнопка */
 
 .btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 30px;
-  background: #00a8e8;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: 0.3s;
+
+display: inline-block;
+
+margin-top: 25px;
+
+padding: 14px 30px;
+
+background: #00a8e8;
+
+color: white;
+
+text-decoration: none;
+
+border-radius: 30px;
+
+transition: 0.3s;
+
 }
+
 
 
 .btn:hover {
-  transform: scale(1.08);
-  background: #0077b6;
+
+transform: scale(1.08);
+
+background: #0077b6;
+
 }
 
 
-/* Разделы */
+
+/* Секции */
 
 section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
 
-  animation: slideUp 0.8s ease;
+padding: 40px 20px;
+
+max-width: 1000px;
+
+margin: auto;
+
 }
+
 
 
 h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 30px;
+
+text-align: center;
+
+margin-bottom: 30px;
+
+font-size: 30px;
+
 }
 
 
-/* Карточки */
+
+/* Карточки мест */
 
 .card {
-  background: white;
-  padding: 25px;
-  margin: 20px 0;
-  border-radius: 20px;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+background: white;
 
-  transition: 0.3s;
+margin: 20px 0;
+
+border-radius: 20px;
+
+overflow: hidden;
+
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+transition: 0.3s;
+
 }
+
 
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+
+transform: translateY(-8px);
+
 }
+
+
+
+.card img {
+
+width: 100%;
+
+height: 250px;
+
+object-fit: cover;
+
+}
+
+
+
+.card-content {
+
+padding: 25px;
+
+}
+
 
 
 /* Галерея */
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+
+gap: 25px;
+
 }
+
 
 
 .photo-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+background:white;
 
-  transition: 0.3s;
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+transition:0.3s;
+
 }
+
 
 
 .photo-card:hover {
-  transform: translateY(-10px);
+
+transform:translateY(-8px);
+
 }
+
 
 
 .photo-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
 
-  transition: 0.4s;
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
 }
 
-
-.photo-card:hover img {
-  transform: scale(1.05);
-}
 
 
 .photo-card h3 {
-  text-align: center;
-  padding: 15px;
-}
 
+text-align:center;
 
-/* Анимации */
-
-@keyframes fadeIn {
-
-from {
-  opacity: 0;
-}
-
-to {
-  opacity: 1;
-}
+padding:15px;
 
 }
 
 
-@keyframes slideUp {
 
-from {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-to {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-}
-
-
-/* Подвал */
+/* Футер */
 
 footer {
-  text-align: center;
-  padding: 25px;
-  background: #222;
-  color: white;
+
+text-align:center;
+
+padding:25px;
+
+background:#222;
+
+color:white;
+
 }
+
 
 
 /* Телефон */
 
 @media(max-width:600px){
 
-.hero {
-  min-height: 400px;
-  padding: 80px 15px;
+
+.navbar {
+
+flex-direction:column;
+
 }
+
+
+.nav-links {
+
+margin-top:10px;
+
+}
+
+
+.nav-links a {
+
+margin:0 8px;
+
+}
+
 
 
 .hero h1 {
-  font-size: 34px;
+
+font-size:34px;
+
 }
+
 
 
 .hero p {
-  font-size: 17px;
+
+font-size:17px;
+
 }
+
 
 
 section {
-  padding: 25px 15px;
+
+padding:25px 15px;
+
 }
+
 
 
 h2 {
-  font-size: 25px;
+
+font-size:25px;
+
 }
 
-
-.card {
-  padding: 20px;
-}
 
 }
